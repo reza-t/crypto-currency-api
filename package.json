@@ -1,0 +1,33 @@
+{
+  "name": "crypto-currency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "yarn run prebuild && tsup index.ts",
+    "prepare": "yarn run build && cd dist && zip -r index.zip index.js",
+    "deploy": "yarn run prepare && cd .tf && terraform apply --auto-approve",
+    "layer:build": "cd nodejs && yarn install && cd .. && zip -r nodejs.zip nodejs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.7.0",
+    "@aws-lambda-powertools/metrics": "^2.7.0",
+    "@aws-lambda-powertools/parameters": "^2.7.0",
+    "@aws-lambda-powertools/tracer": "^2.7.0",
+    "@aws-sdk/client-ssm": "^3.637.0",
+    "axios": "^1.7.5"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.143",
+    "@types/node": "^22.5.0",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1683.0",
+    "tsup": "^8.2.4",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}

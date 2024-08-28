@@ -1,0 +1,57 @@
+# Ignore build output
+/dist/
+/out/
+
+# Ignore dependencies
+/node_modules/
+**/node_modules
+# Ignore environment-specific files
+/.env
+/.env.local
+/.env.*.local
+.env.development
+.env.test
+.env.production
+
+# Ignore editor and IDE files
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+
+# Ignore logs and temporary files
+/log/
+/tmp/
+*.log
+
+# Ignore compiled JavaScript files
+*.js
+*.js.map
+
+# Ignore TypeScript declaration files
+*.d.ts
+
+# Ignore package lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignore test coverage reports
+/coverage/
+.nyc_output/
+
+# Terraform state
+*terraform*
+
+*.zip
