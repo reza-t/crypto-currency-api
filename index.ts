@@ -4,7 +4,7 @@ import type { LambdaInterface } from '@aws-lambda-powertools/commons/types';
 import { MetricUnit, Metrics } from '@aws-lambda-powertools/metrics';
 import { getRandomCryptoSymbol, NAMESPACE, SERVICE_NAME } from "./utils/helper";
 import { Tracer } from '@aws-lambda-powertools/tracer';
-import { LogFactory } from "./utils/LogFactory";
+import { LogFactory } from "logger-factory";
 import { Logger, LogLevel } from '@aws-lambda-powertools/logger';
 import { get_ninja_api_key } from "./utils/ninja-api-key";
 import { SSMClient } from "@aws-sdk/client-ssm";

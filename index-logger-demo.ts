@@ -2,7 +2,7 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 import axios from "axios";
 import { Logger, LogLevel } from '@aws-lambda-powertools/logger';
 import type { LambdaInterface } from '@aws-lambda-powertools/commons/types';
-import { LogFactory } from "./utils/LogFactory";
+import { LogFactory } from "logger-factory";
 import { getRandomCryptoSymbol, SERVICE_NAME } from "./utils/helper";
 import { get_ninja_api_key } from "./utils/ninja-api-key";
 
